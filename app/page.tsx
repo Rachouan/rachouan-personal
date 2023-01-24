@@ -11,7 +11,7 @@ export default function Home() {
             A designer, developer, and illustrator from Belgium.
           </Balancer>
         </h1>
-        <p className="text-2xl text-gray-700">
+        <p className="text-2xl text-gray-700 dark:text-white/70">
           Former freelancer, Currently building a Bitcoin Bank{" "}
           <Anchor href="https://coinbits.app" target="_blank">
             @coinbits

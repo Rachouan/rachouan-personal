@@ -5,6 +5,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
@@ -25,20 +26,19 @@ module.exports = {
           900: "#1d3a8b",
         },
         gray: {
-          50: "#faf6f0",
-          100: "#e9e4e8",
-          200: "#d5ccd5",
-          300: "#b7a9b7",
-          400: "#927e91",
-          500: "#786276",
-          600: "#665463",
-          700: "#564854",
-          800: "#4a4049",
-          900: "#292428",
+          50: "#ecece9",
+          100: "#d9d6ce",
+          200: "#bfb7ab",
+          300: "#9c9281",
+          400: "#736c5e",
+          500: "#565043",
+          600: "#3d392f",
+          700: "#282620",
+          800: "#191815",
+          900: "#0b0b09",
         },
       },
     },
-    colors: {},
   },
   plugins: [],
 };
