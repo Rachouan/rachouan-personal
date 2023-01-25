@@ -16,7 +16,7 @@ export default function Anchor<C extends React.ElementType>({
   return (
     <Component
       className={clsx(
-        `rounded opacity-70 text-gray-900 dark:text-white hover:opacity-100`,
+        `rounded opacity-80 text-gray-900 dark:text-white hover:opacity-100`,
         className
       )}
       {...rest}

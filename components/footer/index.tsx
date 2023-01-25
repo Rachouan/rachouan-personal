@@ -51,15 +51,14 @@ export default function Footer({ className }: FooterProps) {
             </FooterStack>
           </div>
         </div>
-        <div className="py-4 border-t dark:border-gray-600 text-gray-600 dark:text-white/60 text-sm text-center justify-center flex items-center gap-1">
-          © {year} Rachouan - Built with{" "}
-          <IconHeart className="w-4 h-4" strokeWidth={2} /> and
+        <div className="py-4 border-t dark:border-gray-600 text-gray-600 dark:text-white/80 text-sm text-center justify-center flex items-center gap-1">
+          © {year} Rachouan - Built with
           <Anchor
             href={"https://nextjs.org"}
             target="_blank"
             className="flex items-center gap-1"
           >
-            <IconNextJs />
+            <IconNextJs className="w-4 h-4" />
             Next.js
           </Anchor>
         </div>
@@ -83,9 +82,9 @@ function FooterStack({
 }: FooterStackProps) {
   return (
     <div className={clsx("flex flex-col gap-4", className)}>
-      {title && <h6 className="font-medium">{title}</h6>}
+      {title && <h6 className="font-semibold text-lg">{title}</h6>}
       {description && (
-        <p className="text-sm text-gray-700 dark:text-white/70">
+        <p className="text-md text-gray-600 dark:text-white/90">
           {description}
         </p>
       )}
