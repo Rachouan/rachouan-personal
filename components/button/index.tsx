@@ -1,14 +1,17 @@
 import clsx from "clsx";
+import Spinner from "../spinner";
 
 type ButtonProps<C extends React.ElementType> = {
   as?: C;
   className?: string;
+  loading?: boolean;
   children: React.ReactNode;
 } & React.ComponentPropsWithRef<C>;
 
 export default function Button<C extends React.ElementType>({
   as,
   children,
+  loading,
   className,
   ...rest
 }: ButtonProps<C>) {
@@ -21,7 +24,10 @@ export default function Button<C extends React.ElementType>({
       )}
       {...rest}
     >
-      {children}
+      <div className="inline-flex flex-row gap items-center">
+        {loading && <Spinner size={16} />}
+        {children}
+      </div>
     </Component>
   );
 }

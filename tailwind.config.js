@@ -4,6 +4,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}", // Note the addition of the `app` directory.
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./structures/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode: "class", // or 'media' or 'class'
   theme: {
@@ -36,6 +37,18 @@ module.exports = {
           700: "#282620",
           800: "#191815",
           900: "#0b0b09",
+        },
+        green: {
+          50: "#f1fcf3",
+          100: "#e0f8e4",
+          200: "#c2f0cb",
+          300: "#92e3a2",
+          400: "#43c65e",
+          500: "#34b34f",
+          600: "#26933d",
+          700: "#217433",
+          800: "#1f5c2c",
+          900: "#1b4c26",
         },
       },
     },

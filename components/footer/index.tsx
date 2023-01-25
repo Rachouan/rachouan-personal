@@ -1,8 +1,8 @@
+import NewsLetter from "@/structures/newsletter";
 import clsx from "clsx";
-import Image from "next/image";
 import Anchor from "../anchor";
 import Container from "../container";
-import { IconNextJs } from "../icons";
+import { IconHeart, IconNextJs } from "../icons";
 import Logo from "../logo";
 
 interface FooterProps {
@@ -21,8 +21,8 @@ export default function Footer({ className }: FooterProps) {
     >
       <Container className="relative">
         <div className="absolute left-0 -top-10 h-4 w-full bg-gradient-to-r from-denim-700 via-pink-500 to-yellow-500 blur-xl"></div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8 md:py-16">
-          <FooterStack>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 py-8 md:py-16">
+          <FooterStack className="col-span-2">
             <Logo className="fill-denim-600" />
             <h3 className="text-gray-700 dark:text-white text-lg">
               Wanna work together?
@@ -31,7 +31,7 @@ export default function Footer({ className }: FooterProps) {
             </h3>
           </FooterStack>
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="col-span-3 grid grid-cols-1 gap-8 lg:grid-cols-2">
             <FooterStack title="Contact me">
               <ul className="flex gap-4">
                 <li>
@@ -45,12 +45,15 @@ export default function Footer({ className }: FooterProps) {
               title="Join my monthly newsletter"
               description="Get the latest information about all front end related topics."
             >
-              <div></div>
+              <div className="flex-grow">
+                <NewsLetter />
+              </div>
             </FooterStack>
           </div>
         </div>
         <div className="py-4 border-t dark:border-gray-600 text-gray-600 dark:text-white/60 text-sm text-center justify-center flex items-center gap-1">
-          © {year} Rachouan - Built with ❤️ and
+          © {year} Rachouan - Built with{" "}
+          <IconHeart className="w-4 h-4" strokeWidth={2} /> and
           <Anchor
             href={"https://nextjs.org"}
             target="_blank"
@@ -69,11 +72,17 @@ interface FooterStackProps {
   title?: string;
   description?: string;
   children: React.ReactNode;
+  className?: string;
 }
 
-function FooterStack({ title, description, children }: FooterStackProps) {
+function FooterStack({
+  title,
+  description,
+  children,
+  className,
+}: FooterStackProps) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className={clsx("flex flex-col gap-4", className)}>
       {title && <h6 className="font-medium">{title}</h6>}
       {description && (
         <p className="text-sm text-gray-700 dark:text-white/70">

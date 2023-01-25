@@ -13,10 +13,10 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-gray-50/[.8] dark:bg-gray-900/80 backdrop-blur-md transition">
       <Container>
-        <div className="flex justify-between items-center border-b dark:border-gray-600">
-          <Link href="/" className="flex py-4 items-center gap-2">
+        <div className="flex justify-between items-center h-20 border-b dark:border-gray-600">
+          <Link href="/" className="flex items-center gap-2">
             <Logo className="w-10 h-10 fill-gray-900 dark:fill-white" />
-            <h1 className="font-medium text-2xl">Rachouan</h1>
+            <h1 className="font-medium text-2xl hidden md:inline">Rachouan</h1>
           </Link>
 
           <ul className="flex items-center gap-4">
