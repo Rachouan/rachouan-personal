@@ -6,6 +6,7 @@ import Button from "../button";
 import Container from "../container";
 import { IconMoon, IconSun } from "../icons";
 import Logo from "../logo";
+import MobileMenu from "./mobile-menu";
 
 export function Navigation() {
   const [colorTheme, setTheme] = useDarkMode();
@@ -20,7 +21,7 @@ export function Navigation() {
           </Link>
 
           <ul className="flex items-center gap-4">
-            <li>
+            <li className="hidden md:inline">
               <Link href="/me">about</Link>
             </li>
             <button onClick={() => setTheme(colorTheme)}>
@@ -30,6 +31,9 @@ export function Navigation() {
               <Button as={"a"} href="/contact">
                 {`Let's Talk`}
               </Button>
+            </li>
+            <li className="md:hidden">
+              <MobileMenu />
             </li>
           </ul>
         </div>
