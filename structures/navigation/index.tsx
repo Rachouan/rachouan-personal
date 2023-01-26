@@ -2,10 +2,10 @@
 
 import useDarkMode from "@/hooks/use-dark-mode";
 import Link from "next/link";
-import Button from "../button";
-import Container from "../container";
-import { IconMoon, IconSun } from "../icons";
-import Logo from "../logo";
+import Button from "../../components/button";
+import Container from "../../components/container";
+import { IconMoon, IconSun } from "../../components/icons";
+import Logo from "../../components/logo";
 
 export function Navigation() {
   const [colorTheme, setTheme] = useDarkMode();
@@ -16,7 +16,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-20 border-b dark:border-gray-600">
           <Link href="/" className="flex items-center gap-2">
             <Logo className="w-10 h-10 fill-gray-900 dark:fill-white" />
-            <h1 className="font-semibold text-2xl hidden md:inline">
+            <h1 className="font-rachouan font-semibold text-2xl hidden md:inline">
               Rachouan
             </h1>
           </Link>

@@ -1,9 +1,9 @@
 import NewsLetter from "@/structures/newsletter";
 import clsx from "clsx";
-import Anchor from "../anchor";
-import Container from "../container";
-import { IconHeart, IconNextJs } from "../icons";
-import Logo from "../logo";
+import Anchor from "../../components/anchor";
+import Container from "../../components/container";
+import { IconHeart, IconNextJs } from "../../components/icons";
+import Logo from "../../components/logo";
 
 interface FooterProps {
   className?: string;

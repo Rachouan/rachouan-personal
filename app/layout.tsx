@@ -1,7 +1,8 @@
 import "./globals.css";
 import Container from "@/components/container";
-import Footer from "@/components/footer";
-import { Navigation } from "@/components/navigation";
+import Footer from "@/structures/footer";
+import { Navigation } from "@/structures/navigation";
+import clsx from "clsx";
 
 export default function RootLayout({
   children,
@@ -11,7 +12,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className="font-ballinger text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-900 transition-all">
+      <body
+        className={
+          "text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-900 transition-all"
+        }
+      >
         <Navigation />
         <main className="pt-20 min-h-screen flex flex-col">
           <Container>{children}</Container>

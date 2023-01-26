@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Section className="flex justify-center items-center h-4/5">
       <div className="container flex flex-col gap-y-6 justify-center items-center text-center">
-        <h1 className="font-roc text-4xl sm:text-6xl font-semibold">
+        <h1 className="font-rachouan font-bold text-6xl sm:text-8xl">
           <Balancer ratio={0.5}>
             A designer, developer, and illustrator from Belgium.
           </Balancer>

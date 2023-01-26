@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        roc: ["roc-grotesk", "sans-serif"],
+        rachouan: ["degular-display", "sans-serif"],
         ballinger: ["ballinger", "sans-serif"],
       },
       colors: {
