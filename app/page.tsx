@@ -8,7 +8,7 @@ export default function Home() {
       <div className="container flex flex-col gap-y-6 justify-center items-center text-center">
         <h1 className="font-rachouan font-bold text-6xl sm:text-8xl">
           <Balancer ratio={0.5}>
-            A designer, developer, and illustrator from Belgium.
+            A designer, developer and illustrator from Belgium.
           </Balancer>
         </h1>
         <p className="text-2xl text-gray-700 dark:text-white/90">
