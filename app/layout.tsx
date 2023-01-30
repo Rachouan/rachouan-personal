@@ -2,7 +2,6 @@ import "./globals.css";
 import Container from "@/components/container";
 import Footer from "@/structures/footer";
 import { Navigation } from "@/structures/navigation";
-import clsx from "clsx";
 
 export default function RootLayout({
   children,
