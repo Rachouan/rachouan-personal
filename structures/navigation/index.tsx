@@ -19,7 +19,7 @@ export function Navigation() {
 
           <ul className="flex items-center gap-4">
             <li>
-              <Button as={"a"} href="/contact">
+              <Button as={"a"} href="mailto:info@achouan.com">
                 {`Let's Talk`}
               </Button>
             </li>
