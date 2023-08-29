@@ -2,7 +2,7 @@ import NewsLetter from "@/structures/newsletter";
 import clsx from "clsx";
 import Anchor from "../../components/anchor";
 import Container from "../../components/container";
-import { IconHeart, IconNextJs } from "../../components/icons";
+import { IconNextJs } from "../../components/icons";
 import Logo from "../../components/logo";
 
 interface FooterProps {
@@ -15,7 +15,7 @@ export default function Footer({ className }: FooterProps) {
   return (
     <footer
       className={clsx(
-        "bg-gray-50 dark:bg-gray-800 border-t dark:border-gray-600 shadow-inner overflow-hidden transition",
+        "bg-gray-50/50 dark:bg-gray-800 border-t dark:border-gray-600 shadow-inner overflow-hidden transition",
         className
       )}
     >

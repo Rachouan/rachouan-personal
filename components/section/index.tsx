@@ -3,8 +3,6 @@ export interface SectionProps {
   className?: string;
 }
 
-export default function Section({ children, className = "" }: SectionProps) {
-  return (
-    <section className={`py-12 md:py-24 ${className}`}>{children}</section>
-  );
+export default function Section({ className = "", ...rest }: SectionProps) {
+  return <section className={`py-12 md:py-24 ${className}`} {...rest} />;
 }

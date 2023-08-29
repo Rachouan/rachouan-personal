@@ -1,12 +1,17 @@
 import clsx from "clsx";
+import { forwardRef } from "react";
 
-interface ContainerProps {
-  children: React.ReactNode;
-  className?: string;
-}
+const Container = forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...rest }, ref) => (
+  <div
+    ref={ref}
+    className={clsx("container mx-auto px-4", className)}
+    {...rest}
+  />
+));
 
-export default function Container({ children, className }: ContainerProps) {
-  return (
-    <div className={clsx("container mx-auto px-4", className)}>{children}</div>
-  );
-}
+Container.displayName = "ContainerNew";
+
+export default Container;

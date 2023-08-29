@@ -1,8 +1,8 @@
 import Anchor from "@/components/anchor";
 import Section from "@/components/section";
 import Logos from "@/structures/logos";
+import { Testimonials } from "@/structures/testimonials";
 import Image from "next/image";
-import Balancer from "react-wrap-balancer";
 
 export default function Home() {
   return (
@@ -20,9 +20,7 @@ export default function Home() {
             />
           </div>
           <h1 className="font-rachouan font-bold text-6xl sm:text-8xl">
-            <Balancer ratio={0.5}>
-              A designer, developer and illustrator from Belgium.
-            </Balancer>
+            A designer, developer and illustrator from Belgium.
           </h1>
           <p className="text-2xl text-gray-700 dark:text-white/90">
             Former freelancer, Currently building a Bitcoin Bank{" "}
@@ -32,7 +30,9 @@ export default function Home() {
           </p>
         </div>
       </Section>
-      {/* <Logos /> */}
+      <Section className="bg-white rounded-sm">
+        <Testimonials />
+      </Section>
     </>
   );
 }
