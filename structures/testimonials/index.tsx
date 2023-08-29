@@ -5,6 +5,7 @@ import "keen-slider/keen-slider.min.css";
 import { Title } from "@/components/title";
 import Image from "next/image";
 import { useState } from "react";
+import Logos from "../logos";
 
 const testimonials: TestimonialProps[] = [
   {
@@ -42,46 +43,49 @@ const testimonials: TestimonialProps[] = [
 ];
 
 export function Testimonials() {
-  const [{ name, logo, description, title, image }, setTestimonial] =
-    useState<TestimonialProps>(testimonials[0]);
+  const [{ name, description, title }, setTestimonial] =
+    useState<TestimonialProps>(testimonials[2]);
   return (
-    <Container className="max-w-screen-md">
-      <blockquote className="flex flex-col space-y-8 keen-slider__slide px-6 text-center items-center">
-        <Image
-          src={`/logos/${logo}`}
-          width={168}
-          height={80}
-          alt={`logo-${logo}`}
-          className="fill-gray-900 dark:fill-white h-24"
-        />
-        <p className="text-2xl font-rachouan font-light">{description}</p>
-        <div className="flex gap-4">
-          {testimonials.map((testimonial, i) => {
-            const active = testimonial.name === name;
-            return (
-              <button
-                key={`profile-image-${i}`}
-                className={`w-10 h-10 bg-gray-50 rounded-full transition-all hover:opacity-100 overflow-hidden ${
-                  active ? "opacity-100 -translate-y-1 shadow-md" : "opacity-50"
-                }`}
-                onClick={() => setTestimonial(testimonial)}
-              >
-                <Image
-                  src={`/clients/${testimonial.image}`}
-                  width={140}
-                  height={140}
-                  alt={`logo-${logo}`}
-                  className="fill-gray-900 dark:fill-white w-full h-full"
-                />
-              </button>
-            );
-          })}
-        </div>
-        <div>
-          <Title size="base">{name}</Title>
-          <h3 className="opacity-70">{title}</h3>
-        </div>
-      </blockquote>
+    <Container className="max-w-screen-lg">
+      <div className="relative">
+        <blockquote className="relative z-10 flex flex-col space-y-8  p-6 sm:p-12 md:p-20 rounded-md bg-white dark:bg-gray-900 text-center items-center overflow-hidden">
+          <p className="text-lg opacity-50 text-center">Some kind words</p>
+          <p className="text-xl md:text-2xl font-rachouan font-light">
+            {description}
+          </p>
+          <div className="flex gap-4">
+            {testimonials.map((testimonial, i) => {
+              const active: boolean = testimonial.name === name;
+              return (
+                <button
+                  key={`profile-image-${i}`}
+                  className={`w-12 h-12 bg-gray-50 rounded-full transition-all hover:opacity-100 overflow-hidden ${
+                    active
+                      ? "opacity-100 -translate-y-1 shadow-xl"
+                      : "opacity-50"
+                  }`}
+                  onClick={() => setTestimonial(testimonial)}
+                >
+                  <Image
+                    src={`/clients/${testimonial.image}`}
+                    width={140}
+                    height={140}
+                    alt={`image-${testimonial.image}`}
+                    className="fill-gray-900 dark:fill-white w-full h-full"
+                  />
+                </button>
+              );
+            })}
+          </div>
+          <div>
+            <Title size="base" order={3}>
+              {name}
+            </Title>
+            <p className="opacity-70">{title}</p>
+          </div>
+        </blockquote>
+        <div className="absolute w-full left-0 -top-10 h-full bg-gradient-to-r from-denim-700 via-pink-500 to-yellow-500 blur-xl opacity-20 -z-10"></div>
+      </div>
     </Container>
   );
 }

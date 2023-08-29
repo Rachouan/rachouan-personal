@@ -19,7 +19,7 @@ export default function Button<C extends React.ElementType>({
   return (
     <Component
       className={clsx(
-        `px-4 py-2 bg-denim-600 border border-denim-700 rounded text-sm text-denim-50 hover:bg-denim-700 hover:border-denim-900 transition-all`,
+        `px-4 py-2 bg-denim-600 border border-denim-700 rounded-full text-sm text-denim-50 hover:bg-denim-700 hover:border-denim-900 transition-all`,
         className
       )}
       {...rest}

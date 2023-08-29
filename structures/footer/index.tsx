@@ -4,6 +4,7 @@ import Anchor from "../../components/anchor";
 import Container from "../../components/container";
 import { IconNextJs } from "../../components/icons";
 import Logo from "../../components/logo";
+import { Socials } from "../socials";
 
 interface FooterProps {
   className?: string;
@@ -15,12 +16,12 @@ export default function Footer({ className }: FooterProps) {
   return (
     <footer
       className={clsx(
-        "bg-gray-50/50 dark:bg-gray-800 border-t dark:border-gray-600 shadow-inner overflow-hidden transition",
+        "bg-gray-50/30 dark:bg-gray-800 overflow-hidden transition",
         className
       )}
     >
       <Container className="relative">
-        <div className="absolute left-0 -top-10 h-4 w-full bg-gradient-to-r from-denim-700 via-pink-500 to-yellow-500 blur-xl"></div>
+        {/* <div className="absolute left-0 -top-10 h-4 w-full bg-gradient-to-r from-denim-700 via-pink-500 to-yellow-500 blur-xl"></div> */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 py-8 md:py-16">
           <FooterStack className="col-span-2">
             <Logo className="fill-denim-600" />
@@ -51,16 +52,19 @@ export default function Footer({ className }: FooterProps) {
             </FooterStack>
           </div>
         </div>
-        <div className="py-4 border-t dark:border-gray-600 text-gray-600 dark:text-white/80 text-sm text-center justify-center flex items-center gap-1">
-          © {year} Rachouan - Built with
-          <Anchor
-            href={"https://nextjs.org"}
-            target="_blank"
-            className="flex items-center gap-1"
-          >
-            <IconNextJs className="w-4 h-4" />
-            Next.js
-          </Anchor>
+        <div className="py-4 border-t border-gray-50 dark:border-gray-600 text-gray-600 dark:text-white/80 text-sm text-center justify-between flex items-center gap-1">
+          <div className="flex items-center gap-1">
+            © {year} Rachouan - Built with
+            <Anchor
+              href={"https://nextjs.org"}
+              target="_blank"
+              className="flex items-center gap-1"
+            >
+              <IconNextJs className="w-4 h-4" />
+              Next.js
+            </Anchor>
+          </div>
+          <Socials />
         </div>
       </Container>
     </footer>
