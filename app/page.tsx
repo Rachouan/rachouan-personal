@@ -31,8 +31,7 @@ export default function Home() {
           </p>
         </Container>
       </Section>
-
-      <Section className="relative overflow-hidden bg-gradient-to-b from-gray-50/30 to-white dark:from-gray-800 dark:to-gray-900 flex flex-col space-y-24">
+      <Section className="rounded-t-3xl relative overflow-hidden bg-gradient-to-b from-gray-50/30 to-white dark:from-gray-800 dark:to-gray-900 flex flex-col space-y-24">
         <Logos />
         <Testimonials />
       </Section>
