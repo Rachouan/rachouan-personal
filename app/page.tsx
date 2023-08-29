@@ -21,11 +21,11 @@ export default function Home() {
             />
           </div>
           <h1 className="font-rachouan font-bold text-4xl sm:text-8xl">
-            A designer, developer and illustrator from Belgium.
+            A developer, designer and illustrator from Belgium.
           </h1>
           <p className="text-xl text-gray-700 dark:text-white/90">
             Former freelancer, Currently building a Bitcoin Bank{" "}
-            <Anchor href="https://coinbits.app" target="_blank">
+            <Anchor href="https://coinbits.app" target="_blank" underline>
               @coinbits
             </Anchor>
           </p>
