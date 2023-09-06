@@ -5,6 +5,7 @@ import Logos from "@/structures/logos";
 import { Testimonials } from "@/structures/testimonials";
 import Image from "next/image";
 import type { Metadata } from "next";
+import Button from "@/components/button";
 
 export function generateMetadata(): Metadata {
   return {
@@ -67,6 +68,14 @@ export default function Home() {
               @coinbits
             </Anchor>
           </p>
+          <div className="flex gap-4">
+            <Button size="lg" as={"a"} href="mailto:info@achouan.com">
+              {`Let's Talk`}
+            </Button>
+            <Button variant="secondary" size="lg" as={"a"} href="https://www.dropbox.com/scl/fi/52v0fslwf8b33unpsev4b/rachouan_cv.pdf?rlkey=s2ee6r688wrsfijr8nc475cq2&dl=0" target="_blank">
+              {`Resume`}
+            </Button>
+          </div>
         </Container>
       </Section>
       <Section className="rounded-t-3xl relative overflow-hidden bg-gradient-to-b from-gray-50/30 to-white dark:from-gray-800 dark:to-gray-900 flex flex-col space-y-24">

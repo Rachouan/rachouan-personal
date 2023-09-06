@@ -5,7 +5,6 @@ import "keen-slider/keen-slider.min.css";
 import { Title } from "@/components/title";
 import Image from "next/image";
 import { useState } from "react";
-import Logos from "../logos";
 
 const testimonials: TestimonialProps[] = [
   {
@@ -46,7 +45,7 @@ export function Testimonials() {
   const [{ name, description, title }, setTestimonial] =
     useState<TestimonialProps>(testimonials[2]);
   return (
-    <Container className="max-w-screen-lg">
+    <Container size="lg">
       <div className="relative">
         <blockquote className="relative z-10 flex flex-col space-y-8  p-6 sm:p-12 md:p-20 rounded-md bg-white dark:bg-gray-900 text-center items-center overflow-hidden">
           <p className="text-lg opacity-50 text-center">Some kind words</p>
@@ -59,11 +58,10 @@ export function Testimonials() {
               return (
                 <button
                   key={`profile-image-${i}`}
-                  className={`w-12 h-12 bg-gray-50 rounded-full transition-all hover:opacity-100 overflow-hidden ${
-                    active
-                      ? "opacity-100 -translate-y-1 shadow-xl"
-                      : "opacity-50"
-                  }`}
+                  className={`w-12 h-12 bg-gray-50 rounded-full transition-all hover:opacity-100 overflow-hidden ${active
+                    ? "opacity-100 -translate-y-1 shadow-xl"
+                    : "opacity-50"
+                    }`}
                   onClick={() => setTestimonial(testimonial)}
                 >
                   <Image
