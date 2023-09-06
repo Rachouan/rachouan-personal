@@ -18,6 +18,7 @@ export function Navigation() {
 
           <nav className="flex items-center gap-4">
             <Socials />
+
             <Button as={"a"} href="mailto:info@achouan.com">
               {`Let's Talk`}
             </Button>

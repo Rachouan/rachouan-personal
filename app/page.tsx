@@ -4,6 +4,44 @@ import Section from "@/components/section";
 import Logos from "@/structures/logos";
 import { Testimonials } from "@/structures/testimonials";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export function generateMetadata(): Metadata {
+  return {
+    title:
+      "Rachouan | A fullstack developer, designer and illustrator from Belgium.",
+    icons: {
+      icon: "/favicon.svg",
+    },
+    description:
+      "A fullstack developer, designer and illustrator from Belgium.",
+    keywords: [
+      "Fullstack",
+      "developer",
+      "React",
+      "Typescript",
+      "Javascript",
+      "Next.js",
+    ],
+    openGraph: {
+      title: "Rachouan®",
+      description:
+        "A fullstack developer, designer and illustrator from Belgium.",
+      url: "https://rachouan.com",
+      siteName: "Rachouan.com",
+      locale: "en_US",
+      type: "website",
+    },
+    authors: [{ name: "Rachouan Rejeb" }],
+    creator: "Rachouan Rejeb",
+    publisher: "Sebastian Markbåge",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+  };
+}
 
 export default function Home() {
   return (

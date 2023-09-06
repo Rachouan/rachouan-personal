@@ -1,23 +1,28 @@
-import { useEffect, useState } from "react";
+"use client"
+import { create } from 'zustand'
+import { persist, createJSONStorage } from 'zustand/middleware'
 
-function useDarkMode() {
-  const [theme, setTheme] = useState(
-    typeof window !== "undefined" ? localStorage.theme : "dark"
-  );
-  const colorTheme = theme === "dark" ? "light" : "dark";
+type Theme = "dark" | "light"
 
-  useEffect(() => {
-    const root = window.document.documentElement;
-
-    root.classList.remove(colorTheme);
-    root.classList.add(theme);
-
-    if (typeof window !== "undefined") {
-      localStorage.setItem("theme", theme);
-    }
-  }, [theme]);
-
-  return [colorTheme, setTheme] as const;
+interface ThemeStore {
+  theme: Theme,
+  setTheme: (theme: Theme) => void
 }
 
-export default useDarkMode;
+export const useThemeStore = create<ThemeStore>()(
+  persist(
+    (set) => ({
+      theme: "light",
+      setTheme: (theme: Theme) => set({ theme }),
+    }),
+    {
+      name: 'rachouan-theme',
+      storage: createJSONStorage(() => sessionStorage),
+    }
+  )
+)
+
+export default function useTheme() {
+  const { theme, setTheme } = useThemeStore((state) => state);
+  return [theme, setTheme] as const;
+}
