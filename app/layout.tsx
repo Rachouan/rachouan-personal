@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
 import "./globals.css";
 import Footer from "@/structures/footer";
 import { Navigation } from "@/structures/navigation";
 import useTheme from "@/hooks/use-dark-mode";
+import Script from "next/script";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-
   const [theme] = useTheme();
 
   return (
@@ -26,6 +26,12 @@ export default function RootLayout({
           {children}
           <Footer className="flex-grow" />
         </main>
+        <Script
+          src="https://watermelon-cm1.pages.dev/lib/banner.min.js"
+          onLoad={() => {
+            window.PBanner.create("#banner", { theme: "dark", fixed: false });
+          }}
+        />
       </body>
     </html>
   );
