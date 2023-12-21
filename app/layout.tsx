@@ -27,7 +27,7 @@ export default function RootLayout({
           <Footer className="flex-grow" />
         </main>
         <Script
-          src="https://banner.levepalestina.net/lib/banner.min.js"
+          src="https://levepalestina.net/lib/banner.min.js"
           onLoad={() => {
             window.FPBanner.create({
               theme: "auto",
