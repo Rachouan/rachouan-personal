@@ -2,6 +2,6 @@ export {};
 
 declare global {
   interface Window {
-    PBanner: any;
+    FPBanner: any;
   }
 }

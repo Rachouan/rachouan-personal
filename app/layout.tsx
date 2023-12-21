@@ -27,9 +27,12 @@ export default function RootLayout({
           <Footer className="flex-grow" />
         </main>
         <Script
-          src="https://watermelon-cm1.pages.dev/lib/banner.min.js"
+          src="https://banner.levepalestina.net/lib/banner.min.js"
           onLoad={() => {
-            window.PBanner.create("#banner", { theme: "dark", fixed: false });
+            window.FPBanner.create({
+              theme: "auto",
+              fixed: true,
+            });
           }}
         />
       </body>
