@@ -27,9 +27,10 @@ export default function RootLayout({
           <Footer className="flex-grow" />
         </main>
         <Script
-          src="https://levepalestina.net/lib/banner.min.js"
+          src="https://tfpb.techforpalestine.org/lib/banner.min.js"
           onLoad={() => {
-            window.FPBanner.create({
+            // @ts-ignore
+            TFPBanner.create({
               theme: "auto",
               fixed: true,
             });

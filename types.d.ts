@@ -1,7 +1,5 @@
 export {};
 
-declare global {
-  interface Window {
-    FPBanner: any;
-  }
-}
+declare;
+FPBanner: any;
+declare global {}
