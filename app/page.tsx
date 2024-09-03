@@ -27,7 +27,7 @@ export function generateMetadata(): Metadata {
     openGraph: {
       title: "Rachouan®",
       description:
-        "A fullstack developer, designer and illustrator from Belgium.",
+        " A fullstack developer, designer and illustrator based in Portugal",
       url: "https://rachouan.com",
       siteName: "Rachouan.com",
       locale: "en_US",
@@ -60,19 +60,26 @@ export default function Home() {
             />
           </div>
           <h1 className="font-rachouan font-bold text-4xl sm:text-8xl">
-            A developer, designer and illustrator from Belgium.
+            A fullstack developer, designer and illustrator based in Portugal.
           </h1>
           <p className="text-xl text-gray-700 dark:text-white/90">
-            Former freelancer, Currently building a Bitcoin Bank{" "}
+            Currently building a Bitcoin Bank{" "}
             <Anchor href="https://coinbits.app" target="_blank" underline>
               @coinbits
             </Anchor>
+            , and starting a Customer Support service.
           </p>
           <div className="flex gap-4">
-            <Button size="lg" as={"a"} href="mailto:info@achouan.com">
+            <Button size="lg" as={"a"} href="https://cal.com/rachouan/30min">
               {`Let's Talk`}
             </Button>
-            <Button variant="secondary" size="lg" as={"a"} href="https://www.dropbox.com/scl/fi/52v0fslwf8b33unpsev4b/rachouan_cv.pdf?rlkey=s2ee6r688wrsfijr8nc475cq2&dl=0" target="_blank">
+            <Button
+              variant="secondary"
+              size="lg"
+              as={"a"}
+              href="https://www.dropbox.com/scl/fi/52v0fslwf8b33unpsev4b/rachouan_cv.pdf?rlkey=s2ee6r688wrsfijr8nc475cq2&dl=0"
+              target="_blank"
+            >
               {`Resume`}
             </Button>
           </div>

@@ -6,6 +6,16 @@ import Image from "next/image";
 
 const logos = [
   {
+    alt: "coinbits",
+    image: "coinbits.svg",
+    href: "https://coinbits.app",
+  },
+  {
+    alt: "remedymeds",
+    image: "remedymeds.svg",
+    href: "https://remedymeds.com",
+  },
+  {
     alt: "dogstudio",
     image: "dogstudio.svg",
     href: "https://dogstudio.co",
@@ -25,16 +35,6 @@ const logos = [
     image: "haute-hijab.svg",
     href: "https://hautehijab.com",
   },
-  {
-    alt: "coinbits",
-    image: "coinbits.svg",
-    href: "https://coinbits.app",
-  },
-  {
-    alt: "ecomly",
-    image: "ecomly.svg",
-    href: "https://www.ecom.ly",
-  },
 ];
 
 export default function Logos() {
@@ -53,7 +53,7 @@ export default function Logos() {
               width={208}
               height={48}
               alt={alt}
-              className="fill-gray-900 dark:fill-white max-h-8 md:max-h-12 w-full object-contain"
+              className="fill-gray-900 dark:fill-white max-h-8 md:max-h-12 max-w-48 w-full object-contain"
             />
           </Anchor>
         ))}

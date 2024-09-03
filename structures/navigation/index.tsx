@@ -20,7 +20,7 @@ export function Navigation() {
           <nav className="flex items-center gap-4">
             <Socials />
 
-            <Button as={"a"} href="mailto:info@achouan.com">
+            <Button as={"a"} href="https://cal.com/rachouan/30min">
               {`Let's Talk`}
             </Button>
           </nav>
