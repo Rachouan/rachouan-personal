@@ -70,7 +70,7 @@ export default function Home() {
             , and starting a Customer Support service.
           </p>
           <div className="flex gap-4">
-            <Button size="lg" as={"a"} href="https://cal.com/rachouan/30min">
+            <Button size="lg" as={"a"} href="/book">
               {`Let's Talk`}
             </Button>
             <Button

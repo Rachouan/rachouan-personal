@@ -18,7 +18,7 @@ export default function Logo({
       viewBox="0 0 80 80"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={clsx("inline-block w-12 h-12", className)}
+      className={clsx("inline-block size-8", className)}
     >
       <path
         fillRule="evenodd"
